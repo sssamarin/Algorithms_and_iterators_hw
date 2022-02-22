@@ -104,7 +104,8 @@ int main() {
     std::cout << "18: p4 is  " << p4 <<   std::endl;  std::cout << std::endl;
 
     //19#
-    auto distance = std::distance(std::begin(p4),std::find_if(RANGE(p4), [](auto elem){return elem > 1;}));
+    auto distance = std::distance(std::find_if(RANGE(p4), [](auto elem){return elem > 0 ;}),
+                                  std::find_if(RANGE(p4), [](auto elem){return elem > 1;}));
     std::cout << "19: distance is  " << distance <<   std::endl;  std::cout << std::endl;
 
     //20#
